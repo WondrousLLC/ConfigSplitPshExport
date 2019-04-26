@@ -1,0 +1,34 @@
+{
+    "name": "wearewondrous/config_split_psh_export",
+    "description": "Drush 9 alter hook to export the production config on a Platform.sh environment",
+    "type": "drupal-drush",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "WONDROUS LLC",
+            "homepage": "http://www.wearewondrous.com"
+        }
+    ],
+    "homepage": "https://github.com/wearewondrous/config_split_psh_export",
+    "support": {
+        "issues": "https://github.com/wearewondrous/config_split_psh_export/issues",
+        "source": "https://github.com/wearewondrous/config_split_psh_export.git"
+    },
+    "minimum-stability": "dev",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/wearewondrous/psh-toolbelt"
+        }
+    ],
+    "require": {
+        "php": ">=7.1"
+    },
+    "extra": {
+        "drush": {
+            "services": {
+                "drush.services.yml": "^9"
+            }
+        }
+    }
+}
