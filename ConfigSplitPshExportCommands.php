@@ -14,7 +14,7 @@ class ConfigSplitPshExportCommands extends DrushCommands {
   /**
    * Hooks into config-export drush command and alters it's behavior.
    *
-   * @hook pre-command config:export
+   * @hook pre-command-event config:export
    *
    * @param \Consolidation\AnnotatedCommand\CommandData $commandData
    */
