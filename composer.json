@@ -15,12 +15,6 @@
         "source": "https://github.com/wearewondrous/config_split_psh_export.git"
     },
     "minimum-stability": "dev",
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/wearewondrous/psh-toolbelt"
-        }
-    ],
     "require": {
         "php": ">=7.1"
     },
