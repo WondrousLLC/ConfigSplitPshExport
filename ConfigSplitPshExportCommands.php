@@ -2,7 +2,7 @@
 namespace Drush\Commands\config_split_psh_export;
 
 use Drush\Commands\DrushCommands;
-use Consolidation\AnnotatedCommand\CommandData;
+use Symfony\Component\Console\Event\ConsoleCommandEvent;
 
 /**
  *
@@ -16,13 +16,13 @@ class ConfigSplitPshExportCommands extends DrushCommands {
    *
    * @hook pre-command-event config:export
    *
-   * @param \Consolidation\AnnotatedCommand\CommandData $commandData
+   * @param \Symfony\Component\Console\Event\ConsoleCommandEvent $event
    */
-  public function preCommand(CommandData $commandData) {
+  public function preCommandEvent(ConsoleCommandEvent $event) {
     if (!function_exists(self::HOOK_FUNCTION)) {
       return;
     }
 
-    call_user_func(self::HOOK_FUNCTION, $commandData);
+    call_user_func(self::HOOK_FUNCTION);
   }
 }
